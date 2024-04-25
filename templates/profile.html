@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Information</title>
+    <!-- Add any CSS links or stylesheets here -->
+    <style>
+        /* Example CSS for profile page */
+        .profile-info {
+            margin: auto;
+            width: 80%;
+            max-width: 600px; /* Set maximum width for better readability */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Add background color */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+        }
+
+        .profile-info h2 {
+            margin-bottom: 20px; /* Increase margin for better spacing */
+            color: #333; /* Set text color */
+        }
+
+        .profile-info p {
+            margin-bottom: 10px; /* Adjust margin for better spacing */
+            font-size: 16px; /* Increase font size for better readability */
+            color: #666; /* Set text color */
+        }
+
+        .profile-info strong {
+            font-weight: bold; /* Make strong text bold */
+            color: #222; /* Set text color */
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-info">
+        <h2>User Profile</h2>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <!-- Add more user information here as needed -->
+    </div>
+</body>
+</html>
+{% endblock %}
